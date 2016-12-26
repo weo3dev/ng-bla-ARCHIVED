@@ -4,8 +4,13 @@ import { TeamsComponent } from './teams.component';
 import { TeamsRoutingModule } from './teams-routing.module';
 
 @NgModule({
-  imports: [CommonModule, TeamsRoutingModule],
-  declarations: [TeamsComponent],
+  imports: [
+  	CommonModule,
+  	TeamsRoutingModule
+  ],
+  declarations: [
+  	TeamsComponent
+  ],
   exports: [TeamsComponent]
 })
 export class TeamsModule { }

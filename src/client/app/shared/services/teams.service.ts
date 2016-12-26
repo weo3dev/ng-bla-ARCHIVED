@@ -12,7 +12,7 @@ export class TeamsService {
 	constructor(private http: Http) {}
 
 	/* get teams */
-	getUsers(): Observable<Teams[]> {
+	getTeams(): Observable<Team[]> {
 		return this.http.get(this.teamsUrl)
 		.map(res => res.json().data)
 		.catch(this.handleError);
