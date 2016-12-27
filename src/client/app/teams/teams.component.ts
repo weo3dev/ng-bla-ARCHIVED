@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TeamListService } from '../shared/index';
 
 /**
  * This class represents the lazy loaded TeamsComponent.
@@ -9,4 +10,26 @@ import { Component } from '@angular/core';
   templateUrl: 'teams.component.html',
   styleUrls: ['teams.component.css']
 })
-export class TeamsComponent { }
+export class TeamsComponent implements OnInit {
+
+	errorMessage: string;
+	teams: any[] = [];
+
+	constructor(public teamListService: TeamListService) {}
+
+
+	ngOnInit() {
+		this.getTeamList();
+	}
+
+	getTeamList() {
+		this.teamListService.getTeams()
+		.subscribe(
+			teams => this.teams = teams,
+			error => this.errorMessage = <any>error
+		);
+	}
+
+
+}
+

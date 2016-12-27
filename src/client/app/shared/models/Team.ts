@@ -1,4 +1,4 @@
 export class Team {
-	tid?: number;
-	tname: string;
+	id?: number;
+	name: string;
 }

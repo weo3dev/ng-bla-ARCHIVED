@@ -18,7 +18,7 @@ export function main() {
       });
     });
 
-    it('should work',
+    it('should load and work',
       async(() => {
         TestBed
           .compileComponents()

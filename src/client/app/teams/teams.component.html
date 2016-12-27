@@ -9,4 +9,8 @@
 
 <h3>Current Team Listing:</h3>
 
-<router-outlet></router-outlet>
+<ul *ngIf="teams">
+  <li *ngFor="let team of teams">{{name}}</li>
+</ul>
+
+<span *ngIf="!teams">no team list available</span>
