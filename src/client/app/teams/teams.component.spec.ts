@@ -4,7 +4,9 @@ import {
   TestBed
 } from '@angular/core/testing';
 
+import { Observable } from 'rxjs/Observable';
 import { TeamsModule } from './teams.module';
+import { TeamListService } from '../shared/index';
 
 export function main() {
    describe('Teams component', () => {
@@ -14,11 +16,14 @@ export function main() {
     beforeEach(() => {
       TestBed.configureTestingModule({
         declarations: [TestComponent],
-        imports: [TeamsModule]
+        imports: [ TeamsModule],
+        providers: [
+          { provide: TeamListService }
+        ]
       });
-    });
+    });  
 
-    it('should load and work',
+    it('teams should load and work',
       async(() => {
         TestBed
           .compileComponents()
@@ -34,6 +39,6 @@ export function main() {
 
 @Component({
   selector: 'test-cmp',
-  template: '<sd-teams></sd-teams>'
+  template: '<bla-teams></bla-teams>'
 })
 class TestComponent {}

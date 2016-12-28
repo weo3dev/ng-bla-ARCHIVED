@@ -1,11 +1,10 @@
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 import {
   async,
   TestBed
- } from '@angular/core/testing';
+} from '@angular/core/testing';
 
 import { Observable } from 'rxjs/Observable';
-
 import { HomeComponent } from './home.component';
 
 export function main() {
@@ -14,7 +13,7 @@ export function main() {
     beforeEach(() => {
 
       TestBed.configureTestingModule({
-        imports: [FormsModule],
+        imports: [],
         declarations: [HomeComponent]
       });
 
@@ -34,3 +33,10 @@ export function main() {
       }));
   });
 }
+
+@Component({
+  selector: 'test-cmp',
+  template: '<bla-home></bla-home>'
+})
+class TestComponent {}
+

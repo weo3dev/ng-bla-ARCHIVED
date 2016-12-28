@@ -92,7 +92,7 @@ export class SeedConfig {
   /**
    * The path for the base of the application at runtime.
    * The default path is based on the environment '/',
-   * which can be overriden by the `--base` flag when running `npm start`.
+   * which can be overridden by the `--base` flag when running `npm start`.
    * @type {string}
    */
   APP_BASE = argv['base'] || '/';
@@ -144,7 +144,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Bowling Leauge App :: weo3 design and development';
+  APP_TITLE = 'the app';
 
   /**
    * The base folder of the applications source files.

@@ -50,7 +50,7 @@ export function main() {
       });
     });
 
-    it('should build without a problem',
+    it('Hey, Rocky, it should build without a problem',
       async(() => {
         TestBed
           .compileComponents()
@@ -66,7 +66,7 @@ export function main() {
 
 @Component({
   selector: 'test-cmp',
-  template: '<sd-app></sd-app>'
+  template: '<bla-app></bla-app>'
 })
 
 class TestComponent {

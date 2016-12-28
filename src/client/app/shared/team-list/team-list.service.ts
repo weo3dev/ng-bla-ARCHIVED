@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-// import 'rxjs/add/operator/do';  // for debugging
-
 import { Team } from '../models/team';
+import 'rxjs/add/operator/do';  // for debugging
+
 
 /**
  * This class provides the TeamList service with methods to read team names.
@@ -12,7 +12,6 @@ import { Team } from '../models/team';
 export class TeamListService {
 
   private teamsUrl: string = 'http://www.weo3.com/ng-bla/php/api.php/bnp_teams?transform=true';
-  private team: any;
 
   constructor(private http: Http) {}
 
@@ -22,17 +21,9 @@ export class TeamListService {
    */
   getTeams(): Observable<Team[]> {
     return this.http.get(this.teamsUrl)
-    .map((res: Response) => res.json().data)
-    .map(teams => teams.map(this.toTeam))
+    .map(res => res.json().bnp_teams)
+    //.do(data => console.log('server data:', data))  // debug    
     .catch(this.handleError);
-  }
-
-  // reformat team data 
-  private toTeam(team): Team {
-    return {
-      id: team.tid,
-      name: team.tname,  
-    }
   }
 
   /**

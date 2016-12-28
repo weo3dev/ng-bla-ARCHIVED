@@ -24,9 +24,9 @@ export function main() {
           .compileComponents()
           .then(() => {
             let fixture = TestBed.createComponent(TestComponent);
-            let aboutDOMEl = fixture.debugElement.children[0].nativeElement;
+            let topsDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Top ten listings for');
+              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Top ten listings for');
           });
         }));
     });

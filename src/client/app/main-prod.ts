@@ -5,7 +5,8 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowser } from '@angular/platform-browser';
 
-import { AppModuleNgFactory } from './app.module.ngfactory';
+// the next line needs to be resolved sooner than later. AoT / JiT diff approaches
+import { AppModuleNgFactory } from './app.ngfactory';
 
 enableProdMode();
 

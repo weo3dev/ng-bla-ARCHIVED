@@ -5,10 +5,7 @@ import { TeamsComponent } from './teams.component';
 @NgModule({
   imports: [
     RouterModule.forChild([
-      {
-      	path: 'teams',
-      	component: TeamsComponent
-      }
+      { path: 'teams', component: TeamsComponent }
     ])
   ],
   exports: [RouterModule]

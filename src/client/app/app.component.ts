@@ -7,11 +7,11 @@ import './operators';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-app',
+  selector: 'bla-app',
   templateUrl: 'app.component.html',
 })
 export class AppComponent {
   constructor() {
-    console.log('Environment config', Config);
+    //console.log('Environment config', Config);
   }
 }

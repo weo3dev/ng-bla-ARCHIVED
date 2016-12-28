@@ -7,10 +7,8 @@
   <li>Enable teams to update scores for current week, with confirmation from opposing team captain or league owner</li>
 </ul>
 
-<h3>Current Team Listing:</h3>
-
+<h3>Current Roster</h3>
 <ul *ngIf="teams">
-  <li *ngFor="let team of teams">{{name}}</li>
+	<li *ngFor="let team of teams">{{ team.tname }}</li>
 </ul>
 
-<span *ngIf="!teams">no team list available</span>
