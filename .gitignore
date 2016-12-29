@@ -30,6 +30,9 @@ node_modules
 typings
 ts-node
 
+# Slim Lib
+api/libs/*
+
 # Users Environment Variables
 .lock-wscript
 .tsdrc
