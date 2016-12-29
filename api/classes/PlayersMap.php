@@ -3,7 +3,7 @@
 class PlayersMap extends Mapper {
 	
 	public function getPlayers() {
-        $sql = "SELECT bnp_players.pid as pid, pname, SUM(g1 + g2 + g3) as tpins, COUNT(wid)*3 as gms,
+        $sql = "SELECT bnp_players.pid as pid, pname as name, SUM(g1 + g2 + g3) as tpins, COUNT(wid)*3 as gms,
 					ROUND(SUM(g1 + g2 + g3)/(COUNT(wid)*3), 0) as avgs,
 					hnd
 					FROM bnp_players
