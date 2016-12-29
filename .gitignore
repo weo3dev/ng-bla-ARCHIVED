@@ -31,7 +31,8 @@ typings
 ts-node
 
 # Slim Lib
-api/libs/*
+api/config/*
+api/vendor/*
 
 # Users Environment Variables
 .lock-wscript
