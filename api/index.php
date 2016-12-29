@@ -5,6 +5,10 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require_once 'config/db.php';
 require 'vendor/autoload.php';
 
+spl_autoload_register(function ($classname) {
+    require ("classes/" . $classname . ".php");
+});
+
 $config['displayErrorDetails'] = true;
 $config['addContentLengthHeader'] = false;
 
@@ -25,13 +29,30 @@ $container['db'] = function ($c) {
     return $pdo;
 };
 
-
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
-
-    return $response;
+$app->get('/standings', function (Request $request, Response $response) {
+	//$this->logger->addInfo("Current Standings");
+	$mapper = new StandingsMap($this->db);
+	$standings = $mapper->getStandings();
+	$response->getBody()->write(var_export($standings, true));
+	return $response;	
 });
+
+$app->get('/teams', function (Request $request, Response $response) {
+	$mapper = new TeamsMap($this->db);
+	$teams = $mapper->getTeams();
+	$response->getBody()->write(var_export($teams, true));
+	return $response;
+});
+
+$app->get('/players', function (Request $request, Response $response) {
+	$mapper = new PlayersMap($this->db);
+	$players = $mapper->getPlayers();
+	$response->getBody()->write(var_export($players, true));
+	return $response;
+})
+
+
 
 
 $app->run();
+
