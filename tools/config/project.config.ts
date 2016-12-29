@@ -14,6 +14,7 @@ export class ProjectConfig extends SeedConfig {
   constructor() {
     super();
     this.APP_TITLE = 'Bowling League App :: weo3 dev & design';
+    this.APP_BASE = '/ng-bla/';
 
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
     // this.TYPED_COMPILE_INTERVAL = 5;

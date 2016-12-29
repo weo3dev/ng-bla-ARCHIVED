@@ -12,16 +12,7 @@ import { TopsModule } from './tops/tops.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  imports: [
-  	BrowserModule,
-  	HttpModule,
-  	AppRoutingModule,
-  	AboutModule,
-  	HomeModule,
-  	TeamsModule,
-  	TopsModule,
-  	SharedModule.forRoot()
-  ],
+  imports: [BrowserModule, HttpModule, AppRoutingModule, AboutModule, HomeModule, TeamsModule, TopsModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

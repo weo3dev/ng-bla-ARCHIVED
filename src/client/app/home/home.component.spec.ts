@@ -4,19 +4,16 @@ import {
   TestBed
 } from '@angular/core/testing';
 
-import { Observable } from 'rxjs/Observable';
-import { HomeComponent } from './home.component';
+import { HomeModule } from './home.module';
 
 export function main() {
   describe('Home component', () => {
 
     beforeEach(() => {
-
       TestBed.configureTestingModule({
-        imports: [],
-        declarations: [HomeComponent]
+        declarations: [TestComponent],
+        imports: [HomeModule]
       });
-
     });
 
     it('should work',
@@ -24,14 +21,13 @@ export function main() {
         TestBed
           .compileComponents()
           .then(() => {
-            let fixture = TestBed.createComponent(HomeComponent);
-            let homeInstance = fixture.debugElement.componentInstance;
-            let homeDOMEl = fixture.debugElement.nativeElement;
-            expect(homeDOMEl.querySelectorAll('h3')[0].textContent).toEqual('Landing Page');
-          });
+            let fixture = TestBed.createComponent(TestComponent);
+            let homeDOMEl = fixture.debugElement.children[0].nativeElement;
 
-      }));
-  });
+              expect(homeDOMEl.querySelectorAll('h3')[0].textContent).toEqual('Landing Page');
+          });
+        }));
+    });
 }
 
 @Component({
@@ -39,4 +35,3 @@ export function main() {
   template: '<bla-home></bla-home>'
 })
 class TestComponent {}
-

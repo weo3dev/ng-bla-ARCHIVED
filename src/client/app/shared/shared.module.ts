@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
+import { NameListService } from './name-list/index';
 import { TeamListService } from './team-list/index';
-
 
 
 /**
@@ -14,29 +14,17 @@ import { TeamListService } from './team-list/index';
  */
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  declarations: [
-    ToolbarComponent,
-    NavbarComponent
-  ],
-  exports: [
-    ToolbarComponent,
-    NavbarComponent,
-    CommonModule,
-    FormsModule,
-    RouterModule
-  ]
+  imports: [CommonModule, RouterModule],
+  declarations: [ToolbarComponent, NavbarComponent],
+  exports: [ToolbarComponent, NavbarComponent,
+    CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [ TeamListService ]
+      providers: [NameListService,TeamListService]
     };
   }
 }
-
 

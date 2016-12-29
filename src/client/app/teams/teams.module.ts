@@ -6,12 +6,12 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-  	CommonModule,
-  	TeamsRoutingModule,
+    CommonModule,
+    TeamsRoutingModule,
     SharedModule
   ],
   declarations: [
-  	TeamsComponent
+    TeamsComponent
   ],
   exports: [TeamsComponent]
 })

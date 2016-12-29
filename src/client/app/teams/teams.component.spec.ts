@@ -21,7 +21,7 @@ export function main() {
           { provide: TeamListService }
         ]
       });
-    });  
+    });
 
     it('teams should load and work',
       async(() => {
