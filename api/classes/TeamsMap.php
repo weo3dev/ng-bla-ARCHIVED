@@ -3,7 +3,7 @@
 class TeamsMap extends Mapper {
 
     public function getTeams() {
-        $sql = "SELECT tid, tname AS TeamName
+        $sql = "SELECT tid, tname AS name
 					FROM bnp_teams
 					ORDER BY tname ASC";
         $stmt = $this->db->query($sql);
@@ -13,7 +13,7 @@ class TeamsMap extends Mapper {
             $results[] = $row;
         }
 
-        return json_encode($results);
+        return $results;
     }
 
 }

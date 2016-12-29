@@ -3,6 +3,7 @@
  */
 export * from './name-list/index';
 export * from './team-list/index';
+export * from './player-list/index';
 export * from './navbar/index';
 export * from './toolbar/index';
 export * from './config/env.config';

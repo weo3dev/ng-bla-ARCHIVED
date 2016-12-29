@@ -30,28 +30,25 @@ $container['db'] = function ($c) {
 };
 
 $app->get('/standings', function (Request $request, Response $response) {
-	//$this->logger->addInfo("Current Standings");
 	$mapper = new StandingsMap($this->db);
 	$standings = $mapper->getStandings();
-	$response->getBody()->write(var_export($standings, true));
-	return $response;	
+	$newResponse = $response->withJson($standings, 201);
+	return $newResponse;
 });
 
 $app->get('/teams', function (Request $request, Response $response) {
 	$mapper = new TeamsMap($this->db);
 	$teams = $mapper->getTeams();
-	$response->getBody()->write(var_export($teams, true));
-	return $response;
+	$newResponse = $response->withJson($teams, 201);
+	return $newResponse;
 });
 
 $app->get('/players', function (Request $request, Response $response) {
 	$mapper = new PlayersMap($this->db);
 	$players = $mapper->getPlayers();
-	$response->getBody()->write(var_export($players, true));
-	return $response;
-})
-
-
+	$newResponse = $response->withJson($players, 201);
+	return $newResponse;
+});
 
 
 $app->run();

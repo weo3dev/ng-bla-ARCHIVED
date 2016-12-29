@@ -17,7 +17,7 @@ class PlayersMap extends Mapper {
             $results[] = $row;
         }
 
-        return json_encode($results);		
+        return $results;
 	}
 }
 
