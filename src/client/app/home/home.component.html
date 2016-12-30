@@ -11,7 +11,7 @@
 
 <div class="container bg-success">
 	<h3>Current Roster [from db]</h3>
-	<ul *ngIf="teams">
-		<li *ngFor="let team of teams">{{ team.tname }} [ id: {{ team.tid }} ]</li>
+	<ul *ngIf="standings">
+		<li *ngFor="let place of standings">{{ place.tname }} [ {{place.wins}}-{{place.loss}}  - {{place.pcnt}} ]</li>
 	</ul>
 </div>

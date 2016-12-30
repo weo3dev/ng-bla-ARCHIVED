@@ -1,12 +1,11 @@
 <p>Players</p>
 
 <h2>Features</h2>
-<ul>
-  <li>Track player stats per week, per game</li>
-</ul>
+• Track player stats per week, per game
+• use HighCharts or similar to graph stats
 
 <h3>Current League Players</h3>
 <ul *ngIf="players">
-	<li *ngFor="let player of players">{{ player.name }}</li>
+	<li *ngFor="let player of players">{{ player.name }} vs {{ player.pname }}</li>
 </ul>
 

@@ -7,6 +7,7 @@ import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
 import { TeamListService } from './team-list/index';
 import { PlayerListService } from './player-list/index';
+import { StandingsListService } from './standings-list/index';
 
 
 /**
@@ -23,7 +24,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [TeamListService,PlayerListService]
+      providers: [TeamListService,PlayerListService,StandingsListService]
     };
   }
 }

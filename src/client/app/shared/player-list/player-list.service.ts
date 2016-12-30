@@ -20,7 +20,7 @@ export class PlayerListService {
    */
   getPlayers(): Observable<Player[]> {
     return this.http.get(this.apiUrl)
-    .map(res => res.json())
+    .map(res => <Player[]>res.json())
     .catch(this.handleError);
   }
 
@@ -31,7 +31,8 @@ export class PlayerListService {
     .catch(this.handleError);
   }
 
-  private toPlayer(player: any): Player {
+
+  private toPlayer(player:any): Player {
     return {
       id: player.pid,
       name: player.pname,
@@ -41,6 +42,7 @@ export class PlayerListService {
       handicap: player.hnd
     }
   }
+
 
   /**
     * Handle HTTP error

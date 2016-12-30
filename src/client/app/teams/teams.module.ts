@@ -10,9 +10,7 @@ import { SharedModule } from '../shared/shared.module';
     TeamsRoutingModule,
     SharedModule
   ],
-  declarations: [
-    TeamsComponent
-  ],
+  declarations: [TeamsComponent],
   exports: [TeamsComponent]
 })
 export class TeamsModule { }

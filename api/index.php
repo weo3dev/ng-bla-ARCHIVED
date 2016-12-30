@@ -46,8 +46,10 @@ $app->get('/teams', function (Request $request, Response $response) {
 $app->get('/players', function (Request $request, Response $response) {
 	$mapper = new PlayersMap($this->db);
 	$players = $mapper->getPlayers();
-	$newResponse = $response->withJson($players, 201);
-	return $newResponse;
+	//$newResponse = $players->withHeader('Content-type', 'application/json');
+	//$newResponse = $response->withJson($players, 201);
+	//return $newResponse;
+	return $players;
 });
 
 
