@@ -1,11 +1,34 @@
-<p>Players</p>
-
 <h2>Features</h2>
-• Track player stats per week, per game
-• use HighCharts or similar to graph stats
-
-<h3>Current League Players</h3>
-<ul *ngIf="players">
-	<li *ngFor="let player of players">{{ player.name }} vs {{ player.pname }}</li>
+<ul>
+	<li>Track player stats per week, per game</li>
+	<li>use HighCharts or similar to graph stats</li>
 </ul>
 
+<div class="table-view">
+<table>
+	<caption>Current League Players [from db]</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Total Pins</th>
+            <th>Games</th>
+            <th>Average</th>
+            <th>Handicap</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="players">
+        <tr *ngFor="let player of players">
+            <td>{{player.name}}</td>
+            <td>{{player.totalpins}}</td>
+            <td>{{player.games}}</td>
+            <td>{{player.average}}</td>
+            <td>{{player.handicap}}</td>
+        </tr>
+    </tbody>
+    <tbody *ngIf="!players">
+        <tr>
+            <td colspan="8">No player data to show</td>
+        </tr>
+    </tbody>
+</table>
+</div>

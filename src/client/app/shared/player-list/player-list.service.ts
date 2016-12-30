@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
 import { Player } from '../models/player';
-//import 'rxjs/add/operator/do';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 /**
  * This class provides the PlayerList service with methods to read player names.
@@ -20,7 +20,8 @@ export class PlayerListService {
    */
   getPlayers(): Observable<Player[]> {
     return this.http.get(this.apiUrl)
-    .map(res => <Player[]>res.json())
+    .map(res => res.json())
+    .map(players => players.map(this.toPlayer))
     .catch(this.handleError);
   }
 
@@ -31,18 +32,16 @@ export class PlayerListService {
     .catch(this.handleError);
   }
 
-
   private toPlayer(player:any): Player {
     return {
       id: player.pid,
       name: player.pname,
       totalpins: player.tpins,
       games: player.gms,
-      averages: player.avgs,
+      average: player.avgs,
       handicap: player.hnd
     }
   }
-
 
   /**
     * Handle HTTP error

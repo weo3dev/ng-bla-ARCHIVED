@@ -3,6 +3,6 @@ export interface Player {
     name: string;
     totalpins: number;
     games: number;
-    averages: number;
+    average: number;
     handicap: number;
 }
