@@ -8,3 +8,10 @@
 <li>list current week matchups with lane assignments</li>
 <li>list top three in categories from top ten page</li>
 </ul>
+
+<div class="container bg-success">
+	<h3>Current Roster [from db]</h3>
+	<ul *ngIf="teams">
+		<li *ngFor="let team of teams">{{ team.tname }} [ id: {{ team.tid }} ]</li>
+	</ul>
+</div>

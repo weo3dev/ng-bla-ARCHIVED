@@ -1,7 +1,6 @@
 <?php
 
 class StandingsMap extends Mapper {
-    
     public function getStandings() {
         $sql = "SELECT bnp_teams.tid, tname, MAX(wid) AS wid,
                 SUM(twins) AS wins, SUM(tloss) AS loss, FORMAT(100 * SUM(twins)/(SUM(twins) + SUM(tloss)), 2) as pcnt,
@@ -15,8 +14,7 @@ class StandingsMap extends Mapper {
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $results[] = $row;
         }
-
-        return json_encode($results);
+        return $results;
     }
 }
 

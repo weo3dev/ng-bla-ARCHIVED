@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import { Team } from '../models/team';
-import 'rxjs/add/operator/do';  // for debugging
 
-
-/**
- * This class provides the TeamList service with methods to read team names.
- */
 @Injectable()
 export class TeamListService {
 
-  private teamsUrl: string = '/ng-bla/api/teams';
+  private apiUrl: string = '/ng-bla/api/teams';
 
   constructor(private http: Http) {}
 
@@ -20,9 +16,25 @@ export class TeamListService {
    * @return {string[]} The Observable for the HTTP request.
    */
   getTeams(): Observable<Team[]> {
-    return this.http.get(this.teamsUrl)
+    return this.http.get(this.apiUrl)
     .map(res => res.json())
     .catch(this.handleError);
+  }
+
+    /* grab a single user */
+  getTeam(id: number): Observable<Team> {
+    return this.http.get(`${this.apiUrl}/${id}`)
+    .map(res => res.json())
+    .map(this.toTeam)
+    .catch(this.handleError);
+  }
+
+  /* reformat the data to fit Team model */
+  private toTeam(team:any): Team {
+    return {
+      id : team.tid,
+      name : team.tname
+    }
   }
 
   /**

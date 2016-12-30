@@ -7,8 +7,10 @@
   <li>Enable teams to update scores for current week, with confirmation from opposing team captain or league owner</li>
 </ul>
 
-<h3>Current Roster</h3>
-<ul *ngIf="teams">
-	<li *ngFor="let team of teams">{{ team.name }}</li>
-</ul>
+<div class="container bg-success">
+	<h3>Current Roster [from db]</h3>
+	<ul *ngIf="teams">
+		<li *ngFor="let team of teams">{{ team.tname }} [ id: {{ team.tid }} ]</li>
+	</ul>
+</div>
 

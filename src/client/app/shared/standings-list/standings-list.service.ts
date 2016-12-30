@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Player } from '../models/player';
-//import 'rxjs/add/operator/do';
+
 
 /**
  * This class provides the PlayerList service with methods to read player names.
  */
 @Injectable()
-export class PlayerListService {
+export class StandingsListService {
 
-  private apiUrl: string = '/ng-bla/api/players';
+  private apiUrl: string = '/ng-bla/api/standings';
 
   constructor(private http: Http) {}
 
@@ -18,28 +17,10 @@ export class PlayerListService {
    * Returns an Observable for the HTTP GET request for the JSON resource.
    * @return {string[]} The Observable for the HTTP request.
    */
-  getPlayers(): Observable<Player[]> {
+  getStandings(): Observable<any[]> {
     return this.http.get(this.apiUrl)
     .map(res => res.json())
     .catch(this.handleError);
-  }
-
-  getPlayer(id: number): Observable<Player> {
-    return this.http.get(`${this.apiUrl})/${id}`)
-    .map(res => res.json())
-    .map(this.toPlayer)
-    .catch(this.handleError);
-  }
-
-  private toPlayer(player: any): Player {
-    return {
-      id: player.pid,
-      name: player.pname,
-      totalpins: player.tpins,
-      games: player.gms,
-      averages: player.avgs,
-      handicap: player.hnd
-    }
   }
 
   /**
