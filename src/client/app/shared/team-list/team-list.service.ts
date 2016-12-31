@@ -21,7 +21,7 @@ export class TeamListService {
   getTeams(): Observable<Team[]> {
     return this.http.get(this.apiUrl)
     .map(res => res.json())
-    .map(teams => teams.map(this.toTeam))    
+    .map(teams => teams.map(this.toTeam))
     .catch(this.handleError);
   }
 

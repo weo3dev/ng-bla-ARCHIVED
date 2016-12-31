@@ -1,3 +1,16 @@
-<bla-toolbar></bla-toolbar>
-<bla-navbar></bla-navbar>
-<router-outlet></router-outlet>
+<div>
+	<md-toolbar color="primary">
+		<bla-navigation></bla-navigation>
+	</md-toolbar>
+
+	<md-sidenav-layout>
+    	<md-sidenav align="end" mode="side" opened #sidenav>
+    		<button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+    	</md-sidenav>
+
+    	<router-outlet></router-outlet>
+
+	</md-sidenav-layout>
+
+</div>
+    

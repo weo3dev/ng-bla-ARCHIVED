@@ -1,45 +1,17 @@
-/* Reset */
-html,
-body,
-div {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '../../../node_modules/@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
 
-/* Box-sizing border-box */
-* {
-  box-sizing: border-box;
-}
-
-/* Set up a default font and some padding to provide breathing room */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
+md-sidenav-layout {
   height: 100vh;
-  background: #FEFEFE;
-  color: #565656;
 }
 
-p {
-  font-weight: 200;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin-bottom: 1em;
-  margin-top: 1em;
+md-sidenav {
+  width: 20vw;
 }
 
-ul {
-  margin: 10px 0 0;
-  padding: 0 0 0 20px;
-}
-
-li {
-  font-weight: 400;
-  margin-top: 4px;
+[md-raised-button] {
+  width: 100%;
 }
 
 .table-view {
@@ -74,69 +46,3 @@ table th {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
-  }
-  table caption {
-    font-size: 1.3em;
-  }
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-  }
-  table td:before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  table td:last-child {
-    border-bottom: 0;
-  }
-}
-
-input {
-  border: 1px solid #106cc8;
-  font-size: 14px;
-  height: 40px;
-  outline: none;
-  padding: 8px;
-}
-
-button {
-  background-color: #106cc8;
-  border-style: none;
-  color: rgba(255, 255, 255, 0.87);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  height: 40px;
-  padding: 8px 18px;
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: #28739e;
-}
