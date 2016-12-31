@@ -29,27 +29,37 @@ $container['db'] = function ($c) {
     return $pdo;
 };
 
-$app->get('/standings', function (Request $request, Response $response) {
+$app->get('/standings', function ($request, $response) {
 	$mapper = new StandingsMap($this->db);
 	$standings = $mapper->getStandings();
-	$newResponse = $response->withJson($standings, 201);
-	return $newResponse;
+	return $standings;
 });
 
-$app->get('/teams', function (Request $request, Response $response) {
+$app->get('/teams', function ($request, $response) {
 	$mapper = new TeamsMap($this->db);
 	$teams = $mapper->getTeams();
 	$newResponse = $response->withJson($teams, 201);
-	return $newResponse;
+	return $teams;
 });
 
-$app->get('/players', function (Request $request, Response $response) {
+$app->get('/teams/{id}', function ($request, $response, $args) {
+	$team_id = (int)$args['id'];
+	$mapper = new TeamsMap($this->db);
+	$team = $mapper->getTeam($team_id);
+	return $team;
+});
+
+$app->get('/players', function ($request, $response) {
 	$mapper = new PlayersMap($this->db);
 	$players = $mapper->getPlayers();
-	//$newResponse = $players->withHeader('Content-type', 'application/json');
-	//$newResponse = $response->withJson($players, 201);
-	//return $newResponse;
 	return $players;
+});
+
+$app->get('/players/{id}', function ($request, $response, $args) {
+	$player_id = (int)$args['id'];
+	$mapper = new PlayersMap($this->db);
+	$player = $mapper->getPlayer($player_id);
+	return $player;
 });
 
 

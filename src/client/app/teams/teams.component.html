@@ -7,10 +7,32 @@
   <li>Enable teams to update scores for current week, with confirmation from opposing team captain or league owner</li>
 </ul>
 
-<div class="container bg-success">
+<!-- <div class="container bg-success">
 	<h3>Current Roster [from db]</h3>
 	<ul *ngIf="teams">
 		<li *ngFor="let team of teams">{{ team.tname }} [ id: {{ team.tid }} ]</li>
 	</ul>
-</div>
+</div> -->
 
+<div class="table-view">
+    <table class="table-teams">
+    	<caption>Current League Teams [from db]</caption>
+        <thead>
+            <tr>
+                <th>TeamID</th>
+                <th>Team Name</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="teams" class="table-teams-list">
+            <tr *ngFor="let team of teams">
+                <td>{{team.id}}</td>
+                <td>{{team.name}}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="!teams">
+            <tr>
+                <td colspan="8">No team data to show</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

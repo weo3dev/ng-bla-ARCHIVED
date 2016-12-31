@@ -16,7 +16,7 @@ export class PlayerListService {
 
   /**
    * Returns an Observable for the HTTP GET request for the JSON resource.
-   * @return {string[]} The Observable for the HTTP request.
+   * @return {array[]} The Observable for the HTTP request.
    */
   getPlayers(): Observable<Player[]> {
     return this.http.get(this.apiUrl)
@@ -40,7 +40,7 @@ export class PlayerListService {
       games: player.gms,
       average: player.avgs,
       handicap: player.hnd
-    }
+    };
   }
 
   /**

@@ -14,7 +14,7 @@ class StandingsMap extends Mapper {
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $results[] = $row;
         }
-        return $results;
+        return json_encode($results, JSON_NUMERIC_CHECK);
     }
 }
 
