@@ -19,14 +19,14 @@
     	<caption>Current League Teams [from db]</caption>
         <thead>
             <tr>
-                <th>TeamID</th>
-                <th>Team Name</th>
+                <th class="tid">TeamID</th>
+                <th class="tname">Team Name</th>
             </tr>
         </thead>
         <tbody *ngIf="teams" class="table-teams-list">
             <tr *ngFor="let team of teams">
-                <td>{{team.id}}</td>
-                <td>{{team.name}}</td>
+                <td class="tid">{{team.id}}</td>
+                <td class="tname">{{team.name}}</td>
             </tr>
         </tbody>
         <tbody *ngIf="!teams">

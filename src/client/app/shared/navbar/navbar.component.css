@@ -18,6 +18,10 @@ nav a {
   cursor: pointer;
 }
 
+nav a {
+  text-transform: uppercase;
+}
+
 nav a.router-link-active {
   color: #106cc8;
 }
