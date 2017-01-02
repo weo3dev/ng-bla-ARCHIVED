@@ -12,8 +12,6 @@ import { TopsModule } from './tops/tops.module';
 import { PlayersModule } from './players/players.module';
 import { SharedModule } from './shared/shared.module';
 
-import { MaterialModule } from '@angular/material';
-
 
 @NgModule({
   imports: [
@@ -25,8 +23,7 @@ import { MaterialModule } from '@angular/material';
   TeamsModule,
   TopsModule,
   PlayersModule,
-  SharedModule.forRoot(),
-  MaterialModule.forRoot()
+  SharedModule.forRoot()
   ],
   declarations: [AppComponent],
   providers: [{

@@ -15,10 +15,9 @@ import { StandingsListService } from './standings-list/index';
  */
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
-  declarations: [ToolbarComponent, NavbarComponent],
-  exports: [ToolbarComponent, NavbarComponent,
-    CommonModule, FormsModule, RouterModule]
+  imports: [CommonModule,RouterModule],
+  declarations: [ToolbarComponent,NavbarComponent],
+  exports: [ToolbarComponent,NavbarComponent,CommonModule,FormsModule,RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

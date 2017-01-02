@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 
-/**
- * This class provides the PlayerList service with methods to read player names.
- */
 @Injectable()
 export class StandingsListService {
 

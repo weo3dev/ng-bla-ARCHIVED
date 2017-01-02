@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../shared/index';
 import { Player } from '../shared/models/player';
 
-/**
- * This class represents the lazy loaded PlayersComponent.
- */
 @Component({
   moduleId: module.id,
   selector: 'bla-players',

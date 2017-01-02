@@ -9,7 +9,7 @@
 <li>list top three in categories from top ten page</li>
 </ul>
 
-<div class="container bg-success">
+<div >
 	<h3>Current Roster [from db]</h3>
 	<ul *ngIf="standings">
 		<li *ngFor="let place of standings">{{ place.tname }} [ {{place.wins}}-{{place.loss}}  - {{place.pcnt}} ]</li>

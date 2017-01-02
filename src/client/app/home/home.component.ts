@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StandingsListService } from '../shared/index';
 
-/**
- * This class represents the lazy loaded HomeComponent.
- */
 @Component({
   moduleId: module.id,
   selector: 'bla-home',
