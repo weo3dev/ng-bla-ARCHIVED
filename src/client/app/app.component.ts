@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 import { Config } from './shared/index';
-import { MDLDirective } from './mdl.directive';
 
 import './operators';
 
-declare var componentHandler: any;
 
 /**
  * This class represents the main application component.
@@ -15,9 +14,29 @@ declare var componentHandler: any;
   templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  constructor() {
-    //console.log('Environment config', Config);
-    // unnecessary
+
+	isDarkTheme: boolean = false;
+
+	constructor(private location: Location) {
+		//console.log('Environment config', Config);
+		// unnecessary
+	}
+
+  login() {
+    let self = this;
+    console.log('login called');
   }
+
+  logout() {
+    console.log('logout called');
+  }
+
+  loggedIn() {
+    return false;
+  }
+
+  isActive(path: any) {
+    return this.location.path() === path;
+  }	
 
 }

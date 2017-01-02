@@ -24,7 +24,7 @@ export function main() {
             let fixture = TestBed.createComponent(TestComponent);
             let homeDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(homeDOMEl.querySelectorAll('h3')[0].textContent).toEqual('Landing Page');
+              expect(homeDOMEl.querySelectorAll('h4')[0].textContent).toEqual('Landing page features');
           });
         }));
     });

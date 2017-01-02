@@ -9,7 +9,7 @@
     </main>
 </div> -->
 
-<div class="mdl-layout mdl-js-layout">
+<!-- <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
@@ -37,4 +37,31 @@
   <main class="mdl-layout__content">
     <router-outlet></router-outlet>
   </main>
+</div> -->
+
+<!-- <md-sidenav-layout>
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav> -->
+<div>
+  <md-toolbar color="primary">
+
+
+    <button md-button [routerLink]="['/']">Home</button>
+    <button md-button [routerLink]="['/tops']">leaders</button>
+    <button md-button [routerLink]="['/teams']">teams</button>
+    <button md-button [routerLink]="['/players']">players</button>
+    <button md-button [routerLink]="['/about']">about app</button>
+
+    <span class="app-toolbar-filler"></span>
+
+  </md-toolbar>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
+
+<!-- </md-sidenav-layout> -->

@@ -12,7 +12,7 @@ import { TopsModule } from './tops/tops.module';
 import { PlayersModule } from './players/players.module';
 import { SharedModule } from './shared/shared.module';
 
-import { MDLDirective } from './mdl.directive';
+import { MaterialModule } from '@angular/material';
 
 
 @NgModule({
@@ -25,9 +25,10 @@ import { MDLDirective } from './mdl.directive';
   TeamsModule,
   TopsModule,
   PlayersModule,
-  SharedModule.forRoot()
+  SharedModule.forRoot(),
+  MaterialModule.forRoot()
   ],
-  declarations: [AppComponent,MDLDirective],
+  declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>'
