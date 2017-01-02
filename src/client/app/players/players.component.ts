@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../shared/index';
 import { Player } from '../shared/models/player';
+import { MdCard } from '@angular/material';
+
 
 @Component({
   moduleId: module.id,
