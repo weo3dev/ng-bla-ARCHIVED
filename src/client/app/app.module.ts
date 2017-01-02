@@ -12,6 +12,8 @@ import { TopsModule } from './tops/tops.module';
 import { PlayersModule } from './players/players.module';
 import { SharedModule } from './shared/shared.module';
 
+import { MDLDirective } from './mdl.directive';
+
 
 @NgModule({
   imports: [
@@ -25,7 +27,7 @@ import { SharedModule } from './shared/shared.module';
   PlayersModule,
   SharedModule.forRoot()
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent,MDLDirective],
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>'

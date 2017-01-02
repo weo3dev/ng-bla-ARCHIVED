@@ -1,4 +1,4 @@
-:host {
+/*:host {
   background-color: #106cc8;
   color: rgba(255, 255, 255, 0.87);
   display: block;
@@ -12,12 +12,17 @@ h1 {
   font-weight: normal;
   letter-spacing: 0.1px;
   line-height: 48px;
-}
+}*/
 
-.more {
+/*.more {
   background: url("./assets/svg/more.svg");
   float: right;
   height: 24px;
   margin-top: 12px;
   width: 24px;
+}
+*/
+
+.mdl-layout__header-row .mdl-navigation__link {
+  float: left;
 }

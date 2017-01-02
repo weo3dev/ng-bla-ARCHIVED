@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Config } from './shared/index';
+import { MDLDirective } from './mdl.directive';
+
 import './operators';
+
+declare var componentHandler: any;
 
 /**
  * This class represents the main application component.

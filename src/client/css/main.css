@@ -31,3 +31,6 @@ table th {
   text-transform: uppercase;
 }
 
+.mdl-layout__header-row .mdl-navigation__link {
+  float: left;
+}
