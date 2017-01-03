@@ -41,7 +41,7 @@ $ npm run build.dev
 $ npm run build.prod
 ```
 
-Browser should open at http://localhost:5555 (if not, manual override ;) )
+Browser should open at http://localhost:5555
 
 
 _Does not rely on any global dependencies._
@@ -72,6 +72,24 @@ $ npm run serve.coverage
 # Make sure you don't have a global instance of Protractor
 # Make sure you do have Java in your PATH (required for webdriver)
 ```
+
+# TODO
+- make sure e2e testing working
+- integrate sample data with mockbackend for local testing
+- implement travis CI
+- app-wide styling!
+- tie in sub-pages (team page, profile page), to parent pages (teams, players)
+- install HighCharts?
+- sass
+
+### Players page
+- search capability
+- alpha by name, or by team
+
+### teams page
+- link to single team page
+
+
 
 # License
 
