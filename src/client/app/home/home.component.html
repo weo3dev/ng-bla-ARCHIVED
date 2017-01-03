@@ -8,9 +8,39 @@
 <li>list top <em>three</em> in categories from top ten page</li>
 </ul>
 
-<div >
+<!-- <div >
 	<h3>Current Roster [from db]</h3>
 	<ul *ngIf="standings">
 		<li *ngFor="let place of standings">{{ place.tname }} [ {{place.wins}}-{{place.loss}}  - {{place.pcnt}} ]</li>
 	</ul>
+</div> -->
+
+
+
+<div class="table-view">
+    <table class="table-players">
+    	<caption>Current League Standings [from db]</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Wins</th>
+                <th>Loss</th>
+                <th>Pcnt</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="standings" class="table-players-list">
+            <tr *ngFor="let place of standings">
+                <td>{{place.tname}}</td>
+                <td>{{place.wins}}</td>
+                <td>{{place.loss}}</td>
+                <td>{{place.pcnt}}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="!standings">
+            <tr>
+                <td colspan="8">No league data to show</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+
