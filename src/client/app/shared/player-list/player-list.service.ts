@@ -34,9 +34,10 @@ export class PlayerListService {
     return {
       id: player.pid,
       name: player.pname,
+      teamname: player.tname,
       totalpins: player.tpins,
       games: player.gms,
-      average: player.avgs,
+      average: player.avg,
       handicap: player.hnd
     };
   }

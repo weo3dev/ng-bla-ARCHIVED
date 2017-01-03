@@ -1,7 +1,10 @@
 <h2>Features</h2>
 <ul>
-	<li>Track player stats per week, per game</li>
-	<li>use HighCharts or similar to graph stats</li>
+	<li> <s> Track player stats per week, per game</s> - this page more as a directory</li>
+	<li><s>use HighCharts or similar to graph stats</s> - this page more as a directory</li>
+    <li>Responsive - <em>MD has yet to implement responsive as an parameter for grid-list</em></li>
+    <li>player profile can be clicked to go to their page (or team page [undecided])</li>
+    <li>per the first two above line items - sortable by player name alpha, team name alpha</li>
 </ul>
 
 <!-- <div class="table-view">
@@ -34,7 +37,7 @@
 </div> -->
 
 
-<div *ngIf="players">
+<!-- <div *ngIf="players">
 
 <md-card *ngFor="let player of players">
     <img src="card-image.png" class="md-card-image" alt="image caption">
@@ -51,4 +54,31 @@
 
 <div *ngIf="!players">
     nope
-</div>
+</div> -->
+
+<md-grid-list *ngIf="players" cols="2" rowHeight="1:2">
+    <md-grid-tile color="primary" *ngFor="let player of players">
+    <img src="assets/avatars/avatar-{{player.id}}.svg" alt="photo of {{player.name}}">
+    <md-grid-tile-footer>
+        <h3 md-line>{{ player.name }}</h3>
+        <span md-line>Team: {{ player.teamname }}</span>
+        <button md-icon-button (click)="showPlayer(player)"><md-icon>info</md-icon></button>
+    </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>
+
+
+<!-- 
+<md-grid-list cols="4" rowHeight="200px">
+  <md-grid-tile *ngFor="let dog of dogs" [rowspan]="dog.rows">
+    <img src="assets/{{dog.name}}.png" alt="photo of {{dog.name}}">
+    <md-grid-tile-footer>
+      <h3 md-line>{{dog.name}}</h3>
+      <span md-line>Human: {{dog.human}}</span>
+      <button md-icon-button (click)="showDog(dog)">
+        <md-icon>info</md-icon>
+      </button>
+    </md-grid-tile-footer>
+  </md-grid-tile>
+</md-grid-list> -->
+

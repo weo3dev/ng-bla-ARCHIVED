@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../shared/index';
 import { Player } from '../shared/models/player';
-import { MdCard } from '@angular/material';
-
 
 @Component({
   moduleId: module.id,
@@ -24,6 +22,10 @@ export class PlayersComponent implements OnInit {
   getPlayerList() {
     this.playerListService.getPlayers()
     .subscribe(players => this.players = players, error => this.errorMessage = <any>error);
+  }
+
+  showPlayer() {
+    console.log('player clicked');
   }
 }
 
