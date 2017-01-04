@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { Config } from './shared/index';
-import { MdSidenav, MdDialog, MdDialogConfig, MdCard } from '@angular/material';
+import { MdSidenav, MdDialog, MdDialogConfig, MdCard, MdToolbar } from '@angular/material';
 
 
 import './operators';
@@ -42,3 +42,4 @@ export class AppComponent {
   }
 
 }
+

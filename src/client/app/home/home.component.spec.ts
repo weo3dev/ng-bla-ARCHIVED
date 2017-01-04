@@ -4,15 +4,20 @@ import {
   TestBed
 } from '@angular/core/testing';
 
-import { HomeModule } from './home.module';
+import { Observable } from 'rxjs/Observable';
+
+import { HomeComponent } from './home.component';
+import { StandingsListService } from '../shared/index';
 
 export function main() {
   describe('Home component', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        declarations: [TestComponent],
-        imports: [HomeModule]
+        declarations: [HomeComponent],
+        providers: [
+          { provide: StandingsListService, useValue: new MockNameListService() }
+        ]
       });
     });
 
@@ -21,17 +26,44 @@ export function main() {
         TestBed
           .compileComponents()
           .then(() => {
-            let fixture = TestBed.createComponent(TestComponent);
-            let homeDOMEl = fixture.debugElement.children[0].nativeElement;
+            let fixture = TestBed.createComponent(HomeComponent);
+            let homeInstance = fixture.debugElement.componentInstance;
+            let homeDOMEl = fixture.debugElement.nativeElement;
+            let mockNameListService = <MockNameListService>fixture.debugElement.injector.get(StandingsListService);
+            let standingsListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
 
-              expect(homeDOMEl.querySelectorAll('h4')[0].textContent).toEqual('Landing page features');
+            mockNameListService.returnValue = ['1', '2', '3'];
+
+            fixture.detectChanges();
+
+            expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
+            expect(homeDOMEl.querySelectorAll('li').length).toEqual(3);
+            expect(standingsListServiceSpy.calls.count()).toBe(1);
+
+            homeInstance.newName = 'Minko';
+            homeInstance.addName();
+
+            fixture.detectChanges();
+
+            expect(homeDOMEl.querySelectorAll('li').length).toEqual(4);
+            expect(homeDOMEl.querySelectorAll('li')[3].textContent).toEqual('Minko');
+
+
+              // expect(homeDOMEl.querySelectorAll('h4')[0].textContent).toEqual('Landing page features');
           });
         }));
     });
 }
 
-@Component({
-  selector: 'test-cmp',
-  template: '<bla-home></bla-home>'
-})
-class TestComponent {}
+class MockNameListService {
+
+  returnValue: string[];
+
+  get(): Observable<string[]> {
+    return Observable.create((observer: any) => {
+      observer.next(this.returnValue);
+      observer.complete();
+    });
+  }
+}
+
