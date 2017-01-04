@@ -12,51 +12,13 @@ h2 {
 }
 
 
-.table-view {
-  margin: 2em auto;
-  width: 50vw;
-}
+
 
 table {
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
+  border: 1px solid #009900;
 }
 
-table caption {
-  font-size: .75em;
-}
-
-table tr {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: .35em;
-}
-
-table th,
-table td {
-  padding: .625em;
-}
-
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-  table th.tid {
-    width: 15%;
-  }
-
-
-.tid {
-  text-align: center;
-}
-
-.tname {
-  text-align: left;
+table tbody tr {
+  border-top: 1px solid #F90000;
 }
 

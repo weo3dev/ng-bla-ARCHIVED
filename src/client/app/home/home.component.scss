@@ -7,3 +7,11 @@ ul {
   list-style-type: none;
   padding: 0 0 0 8px;
 }
+
+table {
+	border: 1px solid #009900;
+}
+
+table tbody tr+tr {
+	border-top: 1px solid #F90;
+}
