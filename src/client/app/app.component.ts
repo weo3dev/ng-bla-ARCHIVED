@@ -17,12 +17,12 @@ import './operators';
 })
 export class AppComponent {
 
-	isDarkTheme: boolean = false;
+  isDarkTheme: boolean = false;
 
-	constructor(private location: Location) {
+  constructor(private location: Location) {
 		//console.log('Environment config', Config);
 		// unnecessary
-	}
+  }
 
   login() {
     let self = this;
@@ -39,6 +39,6 @@ export class AppComponent {
 
   isActive(path: any) {
     return this.location.path() === path;
-  }	
+  }
 
 }
