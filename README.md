@@ -15,17 +15,23 @@ npm-check-updates for optional below
 # Installing/Running: 
 
 ```bash
-$ git clone --depth 1 https://github.com/metavurt/ng-bla.git [your choice name]
-$ cd [your choice name]
+$ git clone --depth 1 https://github.com/metavurt/ng-bla.git [your-choice-name-goes-here]
+$ cd [your-choice-name-goes-here]
 
 # install dependencies
 $ npm install
 
 
 # optional, but suggested
+# check how current dependencies and dev dependencies are, just in case
+$ npm outdated
+# based on feedback and personal knowledge, either update all or update singular modules
+# if you have npm-check-updates installed, run it and see what it says as well
+$ ncu
+# if the feedback looks too unstable, then update with 
 $ ncu -u
-# then re-run npm install and confirm with npm outdated
-# disregard obvious misalignments unless errors are discovered
+# afterward, re-run npm install and re-confirm with npm outdated
+# disregard obvious misalignments (such as pinned modules based on necessary previous testing) unless large errors are discovered
 # then please alert me at https://github.com/metavurt/ng-bla/issues
 
 

@@ -1,7 +1,1 @@
-table {
-	border: 1px solid #363636;
-}
-
-table tbody tr+tr {
-	border-top: 1px solid #DFDFDF;
-}
+@import 'foundation.min.css';

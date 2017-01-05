@@ -28,7 +28,19 @@
     nope
 </div> -->
 
-<md-grid-list *ngIf="players" cols="2" rowHeight="1:2">
+<div *ngIf="players" class="row small-up-2 medium-up-3">
+  <div class="column" *ngFor="let player of players">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section" (click)="showPlayer(player)>
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.teamname }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <md-grid-list *ngIf="players" cols="2" rowHeight="1:2">
     <md-grid-tile color="primary" *ngFor="let player of players">
     <img src="assets/avatars/avatar-{{player.id}}.svg" alt="photo of {{player.name}}">
     <md-grid-tile-footer>
@@ -37,7 +49,7 @@
         <button md-icon-button (click)="showPlayer(player)"><md-icon>info</md-icon></button>
     </md-grid-tile-footer>
     </md-grid-tile>
-</md-grid-list>
+</md-grid-list> -->
 
 
 <!-- 
