@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamListService } from '../shared/index';
-import { Team } from '../shared/models/team';
+import { Team } from '../shared/models/Team';
 
 /**
  * This class represents the lazy loaded TeamsComponent.

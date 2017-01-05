@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerListService } from '../shared/index';
-import { Player } from '../shared/models/player';
+import { Player } from '../shared/models/Player';
 
 @Component({
   moduleId: module.id,
