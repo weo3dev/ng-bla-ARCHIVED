@@ -11,7 +11,6 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { TeamsComponent } from './teams/teams.component';
 import { PlayersComponent } from './players/players.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
@@ -24,7 +23,6 @@ export function main() {
 
     let config: Route[] = [
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent },
       { path: 'teams', component: TeamsComponent },
       { path: 'players', component: PlayersComponent }
     ];
@@ -33,7 +31,7 @@ export function main() {
         imports: [FormsModule, RouterTestingModule.withRoutes(config),MaterialModule.forRoot()],
         declarations: [TestComponent, ToolbarComponent,
           NavbarComponent, AppComponent,
-          HomeComponent, AboutComponent, TeamsComponent, PlayersComponent],
+          HomeComponent, TeamsComponent, PlayersComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }
         ]

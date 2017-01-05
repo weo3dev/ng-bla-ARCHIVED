@@ -70,6 +70,7 @@ $ npm run build.prod
 ```
 
 Browser should open at http://localhost:5555
+
 _Does not rely on any global dependencies._
 
 
@@ -131,7 +132,7 @@ $ npm run serve.coverage
 ### Teams Page
 - Track player stats per week, per game
 - Track team stats, progress
-- :question: Enable teams to update scores for current week, with confirmation from opposing team captain or league owner :question:
+- Enable teams to update scores for current week, with confirm from opposing team captain or league owner  maybe:question:
 
 ### Players Page
 
