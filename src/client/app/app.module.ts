@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
 import { TeamsModule } from './teams/teams.module';
 import { TopsModule } from './tops/tops.module';
@@ -19,7 +18,6 @@ import { MaterialModule } from '@angular/material';
   BrowserModule,
   HttpModule,
   AppRoutingModule,
-  AboutModule,
   HomeModule,
   TeamsModule,
   TopsModule,

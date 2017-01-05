@@ -1,13 +1,3 @@
-<p>Bowling league app, built on <a href="https://github.com/mgechev/angular-seed" target="_blank">angular-seed</a>, modification will be substantial to run with a slim api --> mysql db</p>
-
-<h4>Landing page features</h4>
-<ul>
-<li>list current standings based on last week's results</li>
-<li>list current week matchups with lane assignments</li>
-<li>list top <em>three</em> in categories from top ten page</li>
-</ul>
-
-
 <div class="table-view">
     <table class="table-standings unstriped">
     	<caption>Current League Standings [from db]</caption>
@@ -29,7 +19,7 @@
         </tbody>
         <tbody *ngIf="!standings">
             <tr>
-                <td colspan="8">No league data to show</td>
+                <td colspan="4"><img src="assets/svg/balls.svg"></td>
             </tr>
         </tbody>
     </table>

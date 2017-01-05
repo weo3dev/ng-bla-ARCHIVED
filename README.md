@@ -2,9 +2,25 @@
 [![Dependency Status](https://david-dm.org/metavurt/ng-bla.svg)](https://david-dm.org/metavurt/ng-bla)
 [![devDependency Status](https://david-dm.org/metavurt/ng-bla/dev-status.svg)](https://david-dm.org/metavurt/ng-bla?type=dev&view=list)
 
-# About
+- [Intro](#intro)
+- [Requirements](#requirements)
+- [Installing](#installing)
+- [Running](#running)
+- [Configuration](#configuration)
+- [Running tests](#running-tests)
+- [Goals](#goals)
+- [Notes](#notes)
+- [Todo](#todo)
+- [License](#license)
+
+
+
+# Intro
 
 `ng-bla` is a casual bowling league app for league, team, and player tracking.
+
+This app is the culmination of too many lost games over a few missed pins. And, to be honest, quite a lot of beer. Bowling app market is lacking in a easy to use, mobile friendly, accessible fun *league* app for casual league play.
+
 
 # Requirements
 
@@ -12,7 +28,7 @@ Node >=v6.5.0 and npm >=3.10.3
 
 npm-check-updates for optional below
 
-# Installing/Running: 
+# Installing
 
 ```bash
 $ git clone --depth 1 https://github.com/metavurt/ng-bla.git [your-choice-name-goes-here]
@@ -35,6 +51,8 @@ $ ncu -u
 # then please alert me at https://github.com/metavurt/ng-bla/issues
 
 
+# Running
+
 # watch your files and use livereload by default
 $ npm start
 # api document for the app
@@ -52,8 +70,6 @@ $ npm run build.prod
 ```
 
 Browser should open at http://localhost:5555
-
-
 _Does not rely on any global dependencies._
 
 
@@ -83,13 +99,56 @@ $ npm run serve.coverage
 # Make sure you do have Java in your PATH (required for webdriver)
 ```
 
+# Goals
+- easy to use on mobile; responsive to larger screens
+- league owners can admin all
+- team leaders can invite/add/edit/delete/confirm team members
+- team members can track personal goals
+- bowling data tools available to manipulate granularly, spot weak points
+- enable league communication for announcements
+- RC by Q2 2017
+- deliver working app to my lovely DiverseyRiverBowl friends and frenemies, for use and enjoyment, by Q3 2017
+
+### Stack
+- Angular 2 on up, using angular-seed which implemented angular-cli as a guide
+- php RESTful API, using [Slim Framework](https://www.slimframework.com/)
+- MySQL, because who doesn't love a good left join??
+- combined (for now) use of [Zurb's Foundation 6](http://foundation.zurb.com/) and [Material Design 2 for Angular](https://github.com/angular/material2) for layout/styling
+- git - to save our souls when we are so very human and press delete at the wrong time
+
+
+# Notes
+- this will evolve to exist as a **production-level** ready app. Testing, compliance, and best practices will be included
+- will remain as a live example of different *evolving* areas of Angular - January 2017 should be fun!
+- this app will remain in beta until at least end of Q1 2017
+
+
+### Landing Page (home)
+- list current standings based on last week's results
+- list current week matchups with lane assignments
+- list top *three* in categories from top ten page
+
+### Teams Page
+- Track player stats per week, per game
+- Track team stats, progress
+- :question: Enable teams to update scores for current week, with confirmation from opposing team captain or league owner :question:
+
+### Players Page
+
+- ~~Track player stats per week, per game~~ - this page more as a directory
+- ~~use HighCharts or similar to graph stats~~ - this page more as a directory
+- Responsive - *MD has yet to implement responsive as an parameter for grid-list*
+- player profile can be clicked to go to their page (or team page :question: [undecided])
+- per the first two above line items - sortable by player name alpha, team name alpha
+
+
 # TODO
-- make sure e2e testing working
+- make sure e2e testing working :100:
 - integrate sample data with mockbackend for local testing
-- implement travis CI
+- implement travis CI :100:
 - app-wide styling!
 - tie in sub-pages (team page, profile page), to parent pages (teams, players)
-- install HighCharts?
+- install HighCharts :question:
 - sass
 
 ### Players page
