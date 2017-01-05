@@ -32,7 +32,7 @@
   <div class="column" *ngFor="let player of players">
     <div class="card">
       <img src="assets/avatars/avatar-{{player.id}}.svg">
-      <div class="card-section" (click)="showPlayer(player)>
+      <div class="card-section" (click)="showPlayer(player)">
         <h3>{{ player.name }}</h3>
         <p>{{ player.teamname }}</p>
       </div>
