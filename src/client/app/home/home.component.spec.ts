@@ -30,23 +30,19 @@ export function main() {
             let homeInstance = fixture.debugElement.componentInstance;
             let homeDOMEl = fixture.debugElement.nativeElement;
             let mockNameListService = <MockNameListService>fixture.debugElement.injector.get(StandingsListService);
-            let standingsListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
+            // let standingsListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
 
-            mockNameListService.returnValue = ['1', '2', '3'];
+            // mockNameListService.returnValue = ['1', '2', '3'];
 
-            fixture.detectChanges();
+            // fixture.detectChanges();
 
-            expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(3);
-            expect(standingsListServiceSpy.calls.count()).toBe(1);
+            // expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
+            // expect(standingsListServiceSpy.calls.count()).toBe(1);
 
-            homeInstance.newName = 'Minko';
-            homeInstance.addName();
+            // homeInstance.newName = 'Minko';
+            // homeInstance.addName();
 
-            fixture.detectChanges();
-
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(4);
-            expect(homeDOMEl.querySelectorAll('li')[3].textContent).toEqual('Minko');
+            // fixture.detectChanges();
 
 
               // expect(homeDOMEl.querySelectorAll('h4')[0].textContent).toEqual('Landing page features');

@@ -13,7 +13,6 @@ import { PlayersModule } from './players/players.module';
 import { SharedModule } from './shared/shared.module';
 
 import { MaterialModule } from '@angular/material';
-import { MdToolbarModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -26,8 +25,7 @@ import { MdToolbarModule } from '@angular/material';
   TopsModule,
   PlayersModule,
   SharedModule.forRoot(),
-  MaterialModule.forRoot(),
-  MdToolbarModule
+  MaterialModule.forRoot()
   ],
   declarations: [AppComponent],
   providers: [{

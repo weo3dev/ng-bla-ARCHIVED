@@ -4,7 +4,6 @@ import { PlayersComponent } from './players.component';
 import { PlayersRoutingModule } from './players-routing.module';
 
 import { MaterialModule } from '@angular/material';
-
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({

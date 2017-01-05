@@ -9,13 +9,15 @@ import { TeamListService } from './team-list/index';
 import { PlayerListService } from './player-list/index';
 import { StandingsListService } from './standings-list/index';
 
+import { MaterialModule } from '@angular/material';
+
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
 
 @NgModule({
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,MaterialModule],
   declarations: [ToolbarComponent,NavbarComponent],
   exports: [ToolbarComponent,NavbarComponent,CommonModule,FormsModule,RouterModule]
 })

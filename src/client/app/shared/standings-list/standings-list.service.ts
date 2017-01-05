@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
 
 
+/**
+ * This class provides the StandingsList service with methods to read current standings.
+ */
 @Injectable()
 export class StandingsListService {
 
@@ -15,7 +17,7 @@ export class StandingsListService {
    * Returns an Observable for the HTTP GET request for the JSON resource.
    * @return {string[]} The Observable for the HTTP request.
    */
-  getStandings(): Observable<any[]> {
+  getLeagueStandings(): Observable<any[]> {
     return this.http.get(this.apiUrl)
     .map(res => res.json())
     .catch(this.handleError);

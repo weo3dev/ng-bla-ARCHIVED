@@ -27,18 +27,21 @@ export function main() {
       });
     });
 
-    it('should return an Observable when "getStandings" is called', async(() => {
-      expect(TestBed.get(StandingsListService).getStandings()).toEqual(jasmine.any(Observable));
+    it('should return an Observable when "getLeagueStandings" is called', async(() => {
+      expect(TestBed.get(StandingsListService).getLeagueStandings()).toEqual(jasmine.any(Observable));
     }));
 
-    it('should resolve to list of teams when "getStandings" is called', async(() => {
-      let standingsListService = TestBed.get(StandingsListService);
-      let mockBackend = TestBed.get(MockBackend);
+    it('should resolve to list of teams when "getLeagueStandings" is called', async(() => {
+      // let standingsListService = TestBed.get(StandingsListService);
+      // let mockBackend = TestBed.get(MockBackend);
 
-      mockBackend.connections.subscribe((c: any) => {
-        //c.mockRespond(new Response(new ResponseOptions({ body: '["Dijkstra"]' })));
-      });
+      // mockBackend.connections.subscribe((c: any) => {
+      //   c.mockRespond(new Response(new ResponseOptions({ body: '["Dijkstra", "Hopper"]' })));
+      // });
 
+      // standingsListService.get().subscribe((data: any) => {
+      //   expect(data).toEqual(['Dijkstra', 'Hopper']);
+      // });
 
     }));
   });

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { Config } from './shared/index';
-import { MdSidenav, MdDialog, MdDialogConfig, MdCard, MdToolbar } from '@angular/material';
+import { MdToolbar } from '@angular/material';
 
 
 import './operators';
@@ -19,7 +19,7 @@ export class AppComponent {
 
   isDarkTheme: boolean = false;
 
-  constructor(private location: Location) {
+  constructor(private location: Location ) {
 		//console.log('Environment config', Config);
 		// unnecessary
   }

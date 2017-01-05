@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
     constructor (private standingsListService: StandingsListService) {}
 
     ngOnInit() {
-        this.getCurrentStandings();
+        // this.getCurrentStandings();
     }
 
   getCurrentStandings() {
-    this.standingsListService.getStandings()
+    this.standingsListService.getLeagueStandings()
     .subscribe(standings => this.standings = standings, error => this.errorMessage = <any>error);
   }
 
