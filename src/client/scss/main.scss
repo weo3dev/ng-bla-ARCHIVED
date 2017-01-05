@@ -21,3 +21,24 @@ $theme: md-light-theme($primary, $accent, $warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($theme);
+
+
+bla-toolbar {
+	height: inherit;
+}
+
+md-toolbar {
+	padding: 0;
+	position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background: #FFF;
+    color: rgba(0,0,0,0.25);
+    border-top: 1px solid #efefef;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);    
+}
+
+bla-navigation {
+	justify-content: space-around;
+}
+

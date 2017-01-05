@@ -23,6 +23,16 @@ h1 {
 }
 */
 
-.mdl-layout__header-row .mdl-navigation__link {
-  float: left;
+bla-toolbar {
+  height: inherit;
 }
+
+
+bla-navigation {
+  display: flex;
+  height: inherit;
+    width: 100vw;
+    justify-content: space-around;
+    /* cool stuff */
+}
+

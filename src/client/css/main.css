@@ -1,1 +1,26 @@
 @import 'foundation.min.css';
+
+bla-toolbar {
+	height: inherit;
+	width: 100vw;
+}
+
+md-toolbar {
+	padding: 0;
+	position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background: #FFF;
+    color: rgba(0,0,0,0.25);
+    border-top: 1px solid #efefef;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);    
+}
+
+bla-app {
+	height: 100vh;
+	width: 100vw;
+}
+
+bla-navigation {
+	justify-content: space-around;
+}
