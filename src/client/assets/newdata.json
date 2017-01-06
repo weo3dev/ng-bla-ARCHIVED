@@ -1,0 +1,146 @@
+[
+  {
+    "tid": 9,
+    "tname": "Guttermouths",
+    "wid": 8,
+    "wins": 23,
+    "loss": 9,
+    "pcnt": 71.88,
+    "tpins": 18282
+  },
+  {
+    "tid": 4,
+    "tname": "Bowlkake",
+    "wid": 8,
+    "wins": 21,
+    "loss": 11,
+    "pcnt": 65.63,
+    "tpins": 18456
+  },
+  {
+    "tid": 3,
+    "tname": "Three & A Half Amigos",
+    "wid": 8,
+    "wins": 21,
+    "loss": 11,
+    "pcnt": 65.63,
+    "tpins": 17948
+  },
+  {
+    "tid": 14,
+    "tname": "Split Happens",
+    "wid": 8,
+    "wins": 20,
+    "loss": 12,
+    "pcnt": 62.5,
+    "tpins": 18285
+  },
+  {
+    "tid": 1,
+    "tname": "Little Jerrys",
+    "wid": 8,
+    "wins": 19,
+    "loss": 13,
+    "pcnt": 59.38,
+    "tpins": 18102
+  },
+  {
+    "tid": 6,
+    "tname": "Butt Chuggers",
+    "wid": 8,
+    "wins": 18,
+    "loss": 14,
+    "pcnt": 56.25,
+    "tpins": 18030
+  },
+  {
+    "tid": 5,
+    "tname": "The Bowl Movements",
+    "wid": 8,
+    "wins": 18,
+    "loss": 14,
+    "pcnt": 56.25,
+    "tpins": 17891
+  },
+  {
+    "tid": 2,
+    "tname": "J.C. on M.T.",
+    "wid": 8,
+    "wins": 16.5,
+    "loss": 15.5,
+    "pcnt": 51.56,
+    "tpins": 18294
+  },
+  {
+    "tid": 7,
+    "tname": "Hand Party",
+    "wid": 8,
+    "wins": 16.5,
+    "loss": 15.5,
+    "pcnt": 51.56,
+    "tpins": 17736
+  },
+  {
+    "tid": 11,
+    "tname": "Keglers",
+    "wid": 8,
+    "wins": 14,
+    "loss": 18,
+    "pcnt": 43.75,
+    "tpins": 17831
+  },
+  {
+    "tid": 13,
+    "tname": "PG-13",
+    "wid": 8,
+    "wins": 14,
+    "loss": 18,
+    "pcnt": 43.75,
+    "tpins": 17707
+  },
+  {
+    "tid": 12,
+    "tname": "Shots & Gutters",
+    "wid": 8,
+    "wins": 13,
+    "loss": 19,
+    "pcnt": 40.63,
+    "tpins": 17607
+  },
+  {
+    "tid": 10,
+    "tname": "Bowlamania",
+    "wid": 8,
+    "wins": 12,
+    "loss": 20,
+    "pcnt": 37.5,
+    "tpins": 17538
+  },
+  {
+    "tid": 8,
+    "tname": "Team#8",
+    "wid": 8,
+    "wins": 12,
+    "loss": 20,
+    "pcnt": 37.5,
+    "tpins": 14890
+  },
+  {
+    "tid": 15,
+    "tname": "Team#15",
+    "wid": 8,
+    "wins": 11,
+    "loss": 21,
+    "pcnt": 34.38,
+    "tpins": 17492
+  },
+  {
+    "tid": 16,
+    "tname": "C&M",
+    "wid": 8,
+    "wins": 7,
+    "loss": 25,
+    "pcnt": 21.88,
+    "tpins": 16107
+  }
+]
