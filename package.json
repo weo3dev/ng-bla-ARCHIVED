@@ -40,7 +40,7 @@
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s"
   },
-  "author": "William ONeal <metavurt>",
+  "author": "William ONeal III<metavurt>",
   "license": "MIT",
   "devDependencies": {
     "@angular/compiler-cli": "~2.4.0",

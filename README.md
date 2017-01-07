@@ -13,7 +13,7 @@
 - [Todo](#todo)
 - [License](#license)
 
-## **PLEASE NOTE: This app is less than 30 days old, and is still in exploratory stages in some areas (best practices/implementation of sass, dynamic routing application, best layout/structure for data presentation of bowling league data). Master branch = only branch, at this time.
+### **PLEASE NOTE: This app is less than 30 days old, and is still in exploratory stages in some areas (best practices/implementation of sass, dynamic routing application, best layout/structure for data presentation of bowling league data). Master branch = only branch, at this time.
 
 It's ugly right now, but it's up: [take a look](http://www.weo3.com/ng-bla)
 
