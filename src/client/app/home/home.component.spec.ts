@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import {
-  async,
-  TestBed
-} from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
+
 
 import { Observable } from 'rxjs/Observable';
-
 import { HomeComponent } from './home.component';
 import { StandingsListService } from '../shared/index';
 
@@ -20,6 +17,7 @@ export function main() {
         ]
       });
     });
+
 
     it('should work',
       async(() => {
@@ -53,7 +51,7 @@ export function main() {
 
 class MockNameListService {
 
-  returnValue: string[];
+  returnValue: Object;
 
   get(): Observable<string[]> {
     return Observable.create((observer: any) => {

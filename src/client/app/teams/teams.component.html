@@ -1,24 +1,8 @@
+<md-list *ngIf="teams">
+  <md-list-item *ngFor="let team of teams" >
+    <img md-list-avatar src="assets/logos/team1logo.svg" alt="Team Logo FPO">
+    <h3 md-line>{{team.name}} </h3>
+    <a href="teams/{{team.id}}">view team page</a>
+  </md-list-item>
+</md-list>
 
-
-<div class="table-view">
-    <table class="table-teams">
-    	<caption>Current League Teams [from db]</caption>
-        <thead>
-            <tr>
-                <th class="wlp">ID</th>
-                <th class="teamname">Name</th>
-            </tr>
-        </thead>
-        <tbody *ngIf="teams" class="table-teams-list">
-            <tr *ngFor="let team of teams">
-                <td class="wlp">{{team.id}}</td>
-                <td class="teamname">{{team.name}}</td>
-            </tr>
-        </tbody>
-        <tbody *ngIf="!teams">
-            <tr>
-                <td colspan="2">Loading...</td>
-            </tr>
-        </tbody>
-    </table>
-</div>

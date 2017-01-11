@@ -1,7 +1,4 @@
-:host {
-  display: block;
-  padding: 0 16px;
-}
+
 
 h2 {
   font-size: 20px;
@@ -14,23 +11,29 @@ h2 {
 .card {
   border-radius: 0.5em;
   position: relative;
+  border: 1px solid #676767;  
 }
 
+
 .card-section {
-  padding: 0.5rem 1rem;
-  background: rgba(0,0,0,0.75);
-  color: #FFF;
+  padding: 0.25rem 0.5rem;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
   position: absolute;
   bottom: 0;
   width: 100%;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
   .card-section h3 {
     line-height: 1;
-    margin-top: 0em;
+    margin: 0;
   }
 
   .card-section p {
     font-size: 0.8rem;
-    line-height: 2;
+    line-height: 1;
   }

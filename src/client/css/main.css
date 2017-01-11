@@ -6,24 +6,30 @@ img.loader-img {
 	margin: 0 auto;
 }
 
-bla-toolbar {
-	height: inherit;
-	width: 100vw;
+bla-header {
+    position: fixed;
+    z-index: 10; /* do not leave permanent */
+    min-height: 1em;
+    width: 100vw;
+    text-align: center;
+    color: #FFF;
+    background: #F27D0C;
+    top: 0;
+    border-bottom: #3px solid #d60;
 }
 
-md-toolbar {
-	padding: 0 !important;
-	position: fixed;
+bla-navigation {
+	display: flex;
+	width: 100vw;
+	padding: 0;
+	position: fixed;	
     bottom: 0;
     z-index: 100;
     background: #FFF;
     color: rgba(0,0,0,0.25);
     border-top: 1px solid #efefef;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);    
-}
-
-bla-navigation {
-	justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	justify-content: space-around;    
 }
 
 .app-content {
@@ -46,6 +52,4 @@ table {
 table tbody tr+tr td {
 	border-top: 1px solid #DFDFDF;
 }
-
-bla-home { padding: 0 }
 

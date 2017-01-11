@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'bla-navigation',
-  templateUrl: 'navbar.component.html',
-  styleUrls: ['navbar.component.css'],
+  templateUrl: 'navigation.component.html',
+  styleUrls: ['navigation.component.css'],
 })
-export class NavbarComponent { }
+export class NavigationComponent { }

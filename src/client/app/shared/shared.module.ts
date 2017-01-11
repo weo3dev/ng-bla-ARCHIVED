@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ToolbarComponent } from './toolbar/index';
-import { NavbarComponent } from './navbar/index';
+import { HeaderComponent } from './header/index';
+import { NavigationComponent } from './navigation/index';
 import { TeamListService } from './team-list/index';
 import { PlayerListService } from './player-list/index';
 import { StandingsListService } from './standings-list/index';
@@ -18,8 +18,8 @@ import { MaterialModule } from '@angular/material';
 
 @NgModule({
   imports: [CommonModule,RouterModule,MaterialModule],
-  declarations: [ToolbarComponent,NavbarComponent],
-  exports: [ToolbarComponent,NavbarComponent,CommonModule,FormsModule,RouterModule]
+  declarations: [HeaderComponent,NavigationComponent],
+  exports: [HeaderComponent,NavigationComponent,CommonModule,FormsModule,RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

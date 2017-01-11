@@ -4,7 +4,7 @@ import {
   TestBed
 } from '@angular/core/testing';
 
-import { TopsModule } from './tops.module';
+import { LeadersModule } from './leaders.module';
 
 export function main() {
    describe('Tops component', () => {
@@ -14,7 +14,7 @@ export function main() {
     beforeEach(() => {
       TestBed.configureTestingModule({
         declarations: [TestComponent],
-        imports: [TopsModule]
+        imports: [LeadersModule]
       });
     });
 
@@ -26,7 +26,7 @@ export function main() {
             let fixture = TestBed.createComponent(TestComponent);
             let topsDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Top ten listings for');
+              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Need to make components for:');
           });
         }));
     });
@@ -34,6 +34,6 @@ export function main() {
 
 @Component({
   selector: 'test-cmp',
-  template: '<sd-tops></sd-tops>'
+  template: '<sd-leaders></sd-leaders>'
 })
 class TestComponent {}

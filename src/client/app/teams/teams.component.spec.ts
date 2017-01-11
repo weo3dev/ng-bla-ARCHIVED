@@ -1,24 +1,22 @@
-import { Component } from '@angular/core';
-import {
-  async,
-  TestBed
-} from '@angular/core/testing';
+import { Component }        from '@angular/core';
+import { Router }           from '@angular/router';
+import { async,TestBed }    from '@angular/core/testing';
+import { Observable }       from 'rxjs/Observable';
 
-import { Observable } from 'rxjs/Observable';
-import { TeamsModule } from './teams.module';
-import { TeamListService } from '../shared/index';
+import { TeamsModule }      from './teams.module';
+import { TeamListService }  from '../shared/index';
+import { HttpModule }       from '@angular/http';
 
 export function main() {
    describe('Teams component', () => {
-    // Setting module for testing
-    // Disable old forms
 
     beforeEach(() => {
       TestBed.configureTestingModule({
         declarations: [TestComponent],
-        imports: [ TeamsModule],
+        imports: [ TeamsModule, HttpModule ],
         providers: [
-          { provide: TeamListService }
+          { provide: TeamListService, useValue: new MockNameListService() },
+          { provide: Router, useValue: { 'params': Observable.from([{ 'id': 1 }]) } }
         ]
       });
     });
@@ -29,7 +27,7 @@ export function main() {
           .compileComponents()
           .then(() => {
             let fixture = TestBed.createComponent(TestComponent);
-            let aboutDOMEl = fixture.debugElement.children[0].nativeElement;
+            let teamsDOMEl = fixture.debugElement.children[0].nativeElement;
 
               //expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Features');
           });
@@ -37,8 +35,23 @@ export function main() {
     });
 }
 
+class MockNameListService {
+
+  returnValue: string[];
+
+  get(): Observable<string[]> {
+    return Observable.create((observer: any) => {
+      observer.next(this.returnValue);
+      observer.complete();
+    });
+  }
+}
+
+
 @Component({
   selector: 'test-cmp',
   template: '<bla-teams></bla-teams>'
 })
 class TestComponent {}
+
+

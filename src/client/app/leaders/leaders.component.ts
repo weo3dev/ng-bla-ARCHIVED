@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-tops',
-  templateUrl: 'tops.component.html',
-  styleUrls: ['tops.component.css']
+  selector: 'sd-leaders',
+  templateUrl: 'leaders.component.html',
+  styleUrls: ['leaders.component.css']
 })
-export class TopsComponent { }
+export class LeadersComponent { }

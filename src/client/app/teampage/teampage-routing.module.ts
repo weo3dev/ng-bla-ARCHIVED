@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TopsComponent } from './tops.component';
+import { TeamPageComponent } from './teampage.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
-      { path: 'tops', component: TopsComponent }
+      { path: 'teams/:id', component: TeamPageComponent }
     ])
   ],
   exports: [RouterModule]
 })
-export class TopsRoutingModule { }
+export class TeamPageRoutingModule { }

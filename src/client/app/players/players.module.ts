@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlayersComponent } from './players.component';
 import { PlayersRoutingModule } from './players-routing.module';
-
-import { MaterialModule } from '@angular/material';
-import { SharedModule } from '../shared/shared.module';
+import { PlayersComponent } from './players.component';
+import { PlayerListService } from '../shared/player-list/index';
 
 @NgModule({
   imports: [
     CommonModule,
-    PlayersRoutingModule,
-    MaterialModule,
-    SharedModule
+    PlayersRoutingModule
   ],
-  declarations: [PlayersComponent],
+  declarations: [
+    PlayersComponent
+  ],
+  providers: [
+    PlayerListService
+  ],
   exports: [PlayersComponent]
 })
 export class PlayersModule { }
+

@@ -4,7 +4,7 @@
 export * from './standings-list/index';
 export * from './team-list/index';
 export * from './player-list/index';
-export * from './navbar/index';
-export * from './toolbar/index';
+export * from './navigation/index';
+export * from './header/index';
 export * from './config/env.config';
 

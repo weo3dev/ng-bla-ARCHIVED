@@ -26,12 +26,18 @@ export class TeamListService {
   }
 
     /* grab a single team */
-  getTeam(id: number): Observable<Team> {
+  getTeam(id: any): Observable<Team> {
+    console.log("check id: " + id);
     return this.http.get(`${this.apiUrl}/${id}`)
     .map(res => res.json())
-    .map(this.toTeam)
+    .map(team => team.map(this.toTeam))
     .catch(this.handleError);
   }
+
+  // getTeamAlt(id: number): Promise<Team> {
+  // return this.getTeams()
+  //            .then(teams => teams.find(team => team.id === id));
+  // }
 
   /* reformat the data to fit Team model */
   private toTeam(team:any): Team {

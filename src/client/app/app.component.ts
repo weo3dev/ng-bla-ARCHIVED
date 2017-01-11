@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { Config } from './shared/index';
-import { MdToolbar } from '@angular/material';
-
 
 import './operators';
-
 
 /**
  * This class represents the main application component.

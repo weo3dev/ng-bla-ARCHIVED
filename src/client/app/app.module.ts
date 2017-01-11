@@ -7,23 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './home/home.module';
 import { TeamsModule } from './teams/teams.module';
-import { TopsModule } from './tops/tops.module';
+import { TeamPageModule } from './teampage/teampage.module';
 import { PlayersModule } from './players/players.module';
+import { LeadersModule } from './leaders/leaders.module';
 import { SharedModule } from './shared/shared.module';
 
 import { MaterialModule } from '@angular/material';
 
 @NgModule({
   imports: [
-  BrowserModule,
-  HttpModule,
-  AppRoutingModule,
-  HomeModule,
-  TeamsModule,
-  TopsModule,
-  PlayersModule,
-  SharedModule.forRoot(),
-  MaterialModule.forRoot()
+      BrowserModule,
+      HttpModule,
+      AppRoutingModule,
+      HomeModule,
+      TeamsModule,
+      TeamPageModule,
+      LeadersModule,
+      PlayersModule,
+      SharedModule.forRoot(),
+      MaterialModule.forRoot()
   ],
   declarations: [AppComponent],
   providers: [{
@@ -34,3 +36,5 @@ import { MaterialModule } from '@angular/material';
 
 })
 export class AppModule { }
+
+
