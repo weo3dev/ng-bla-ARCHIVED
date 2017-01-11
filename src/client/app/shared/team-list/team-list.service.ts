@@ -27,7 +27,6 @@ export class TeamListService {
 
     /* grab a single team */
   getTeam(id: any): Observable<Team> {
-    console.log("check id: " + id);
     return this.http.get(`${this.apiUrl}/${id}`)
     .map(res => res.json())
     .map(team => team.map(this.toTeam))

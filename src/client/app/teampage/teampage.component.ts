@@ -26,7 +26,6 @@ export class TeamPageComponent implements OnInit {
       this.route.params
         .switchMap((params: Params) => this.service.getTeam(+params['id']))
         .subscribe((team: Team) => this.team = team);
-        console.log("check team: "+this.team);
     }
 
 //     ngOnInit() {
