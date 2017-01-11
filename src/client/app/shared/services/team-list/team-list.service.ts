@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Team } from '../models/Team';
+import { Team } from '../../models/Team';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 

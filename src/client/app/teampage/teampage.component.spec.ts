@@ -8,7 +8,7 @@ import 'rxjs/add/observable/from';
 
 import { TeamPageModule }  from './teampage.module';
 import { Team } from '../shared/models/Team';
-import { TeamListService } from '../shared/team-list/team-list.service';
+import { TeamListService } from '../shared/index';
 import { HttpModule }      from '@angular/http';
 
 export function main() {

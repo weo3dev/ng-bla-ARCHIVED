@@ -26,7 +26,7 @@ export function main() {
             let fixture = TestBed.createComponent(TestComponent);
             let topsDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Need to make components for:');
+              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Need to make services for:');
           });
         }));
     });

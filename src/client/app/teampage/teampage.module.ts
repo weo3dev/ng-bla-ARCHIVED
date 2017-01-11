@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamPageComponent } from './teampage.component';
 import { TeamPageRoutingModule } from './teampage-routing.module';
-import { TeamListService } from '../shared/team-list/index';
+import { TeamListService } from '../shared/services/team-list/index';
 import { SharedModule } from '../shared/shared.module';
 
 import { MaterialModule } from '@angular/material';

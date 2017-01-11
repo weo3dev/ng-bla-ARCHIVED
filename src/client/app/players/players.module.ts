@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayersRoutingModule } from './players-routing.module';
 import { PlayersComponent } from './players.component';
-import { PlayerListService } from '../shared/player-list/index';
+import { PlayerListService } from '../shared/services/player-list/index';
 
 @NgModule({
   imports: [
