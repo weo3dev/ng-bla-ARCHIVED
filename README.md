@@ -147,12 +147,12 @@ $ npm run serve.coverage
 
 
 # TODO
-- make sure e2e testing working :100:
+- make sure e2e testing working
 - integrate sample data with mockbackend for local testing
-- implement travis CI :100:
+- implement travis CI
 - app-wide styling!
 - tie in sub-pages (team page, profile page), to parent pages (teams, players)
-- install HighCharts :question:
+- install HighCharts
 - sass
 
 ### Players page

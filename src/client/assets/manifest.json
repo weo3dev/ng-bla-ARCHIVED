@@ -1,0 +1,7 @@
+{
+  "short_name": "Bowling League App",
+  "name": "Bowling League App created by weo3 dev and design",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

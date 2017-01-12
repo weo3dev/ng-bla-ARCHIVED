@@ -9,14 +9,23 @@ img.loader-img {
 bla-header {
     position: fixed;
     z-index: 10; /* do not leave permanent */
-    min-height: 1em;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3em;
     width: 100vw;
     text-align: center;
     color: #FFF;
     background: #F27D0C;
-    top: 0;
     border-bottom: #3px solid #d60;
 }
+
+    bla-header h1 {
+        margin: 0;
+        font-weight: 800;
+        font-variant: small-caps;
+    }
 
 bla-navigation {
 	display: flex;
