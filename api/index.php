@@ -65,7 +65,7 @@ $app->get('/players/{id}', function ($request, $response, $args) {
 $app->get('/leaders/{player}/{category}/{handicap}', function ($request, $response, $args) {
 	$player = (string)$args['player'];
 	$category = (string)$args['category'];
-	$handicap = (boolean)$args['handicap'];
+	$handicap = (string)$args['handicap'];
 	$mapper = new LeadersMap($this->db);
 	$leaders = $mapper->getLeaders($player,$category,$handicap);
 	return $leaders;

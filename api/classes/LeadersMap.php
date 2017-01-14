@@ -6,7 +6,7 @@ class LeadersMap extends Mapper {
 
 		// $player valid = m(ale), f(emale), t(eam)
 		// $category valid = g(ame), s(eries)
-		// $handicap valid boolean
+		// $handicap valid = y(es), n(o)
 
 		if($player === 'm') {
 
@@ -14,7 +14,7 @@ class LeadersMap extends Mapper {
 
 			if($category === 'g') {
 
-				if($handicap) {
+				if($handicap === 'y') {
 					// get top three mens games, with handicap
 					return;
 
@@ -31,7 +31,7 @@ class LeadersMap extends Mapper {
 
 	        } else if ($category === 's') {
 
-	        	if($handicap) {
+	        	if($handicap === 'y') {
 	        		// get top three mens series, with handicap
 	        		return;
 
@@ -54,7 +54,7 @@ class LeadersMap extends Mapper {
 
 			if($category === 'g') {
 
-				if($handicap) {
+				if($handicap === 'y') {
 					// get top three womens games, with handicap
 					return;
 
