@@ -20,6 +20,6 @@ cache:
 script:
   - npm run build.prod.exp
 
-  addons:
-    code_climate:
-        repo_token: 83598ae1a16ff81da8cd506999202972ebbf9e88fd6a3cabcb0584403f802e91
+addons:
+  code_climate:
+    repo_token: 83598ae1a16ff81da8cd506999202972ebbf9e88fd6a3cabcb0584403f802e91
