@@ -7,7 +7,7 @@ import {
 import { LeadersModule } from './leaders.module';
 
 export function main() {
-   describe('Tops component', () => {
+   describe('Leaders component', () => {
     // Setting module for testing
     // Disable old forms
 
@@ -24,9 +24,9 @@ export function main() {
           .compileComponents()
           .then(() => {
             let fixture = TestBed.createComponent(TestComponent);
-            let topsDOMEl = fixture.debugElement.children[0].nativeElement;
+            let leadersDOMEl = fixture.debugElement.children[0].nativeElement;
 
-              expect(topsDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Need to make services for:');
+              expect(leadersDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Need to make services for:');
           });
         }));
     });
