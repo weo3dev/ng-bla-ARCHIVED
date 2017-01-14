@@ -62,11 +62,12 @@ $app->get('/players/{id}', function ($request, $response, $args) {
 	return $player;
 });
 
-$app->get('/leaders/{category}', function ($request, $response, $args) {
+$app->get('/leaders/{player}/{category}/{handicap}', function ($request, $response, $args) {
+	$player = (string)$args['player'];
 	$category = (string)$args['category'];
-	//$usehandicap = (boolean)$args['ishandicap'];
+	$handicap = (boolean)$args['handicap'];
 	$mapper = new LeadersMap($this->db);
-	$leaders = $mapper->getLeaders($category);
+	$leaders = $mapper->getLeaders($player,$category,$handicap);
 	return $leaders;
 });
 
