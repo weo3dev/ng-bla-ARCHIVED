@@ -28,7 +28,7 @@ export class WomensSeriesScratchService {
       average: player.avg,
       handicap: player.hnd
     };
-  }  
+  }
 
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
