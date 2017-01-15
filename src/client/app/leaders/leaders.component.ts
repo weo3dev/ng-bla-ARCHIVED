@@ -34,15 +34,15 @@ export class LeadersComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-    	this.getMensGameScratch();
+      this.getMensGameScratch();
       this.getMensSeriesScratch();
       this.getWomensGameScratch();
       this.getWomensSeriesScratch();
     }
 
     getMensGameScratch() {
-    	this.mgsService.getLeaders()
-    	.subscribe(mensGameScratch => this.mensGameScratch = mensGameScratch, error => this.errorMessage = <any>error);
+      this.mgsService.getLeaders()
+      .subscribe(mensGameScratch => this.mensGameScratch = mensGameScratch, error => this.errorMessage = <any>error);
     }
 
     getMensSeriesScratch() {
