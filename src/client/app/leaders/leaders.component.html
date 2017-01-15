@@ -1,16 +1,94 @@
-
 <h2>Need to make services for:</h2>
 <ul>
-  <li>men scratch average</li>
-  <li>women scratch average</li>
-  <li>men handicap average</li>
-  <li>women handicap average</li>
-  <li>men scratch series</li>
-  <li>women scratch series</li>
+  <li><s>men hi scratch game</s></li>
+  <li><s>women hi scratch game</s></li>
+  <li>men hi handicap game</li>
+  <li>women hi handicap game</li>
+  <li><s>men hi scratch series</s></li>
+  <li><s>women hi scratch series</s></li>
+  <li>men hi handicap series</li>
+  <li>women hi handicap series</li>
   <li>team scratch game</li>
   <li>team handi game</li>
   <li>team scratch series</li>
   <li>team handi series</li>
 </ul>
+
+<div *ngIf="!mensGameScratch">
+  <em>Loading Mens High Score Game Leaders...</em>
+</div>
+<div *ngIf="mensGameScratch" class="row small-up-3 large-up-4">
+<h4>Mens High Score Game Scratch</h4>
+  <div class="column" *ngFor="let player of mensGameScratch">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section">
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.hscore }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+
+<div *ngIf="!mensSeriesScratch">
+  <em>Loading Mens High Score Series Leaders...</em>
+</div>
+<div *ngIf="mensSeriesScratch" class="row small-up-3 large-up-4">
+<h4>Mens High Score Series Scratch</h4>
+  <div class="column" *ngFor="let player of mensSeriesScratch">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section">
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.hscore }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div *ngIf="!womensGameScratch">
+  <em>Loading Womens High Score Game Leaders...</em>
+</div>
+<div *ngIf="womensGameScratch" class="row small-up-3 large-up-4">
+<h4>Womens High Score Game Scratch</h4>
+  <div class="column" *ngFor="let player of womensGameScratch">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section">
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.hscore }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div *ngIf="!womensSeriesScratch">
+  <em>Loading Womens High Score Series Leaders...</em>
+</div>
+<div *ngIf="womensSeriesScratch" class="row small-up-3 large-up-4">
+<h4>Womens High Score Series Scratch</h4>
+  <div class="column" *ngFor="let player of womensSeriesScratch">
+    <div class="card">
+      <img src="assets/avatars/avatar-{{player.id}}.svg">
+      <div class="card-section">
+        <h3>{{ player.name }}</h3>
+        <p>{{ player.hscore }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 

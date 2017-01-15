@@ -69,6 +69,23 @@ class LeadersMap extends Mapper {
 							GROUP BY bnp_players.pid
 		                    ORDER BY hscore DESC LIMIT 3";
 		        }
+
+			} else if ($category === 's') {
+
+	        	if($handicap === 'y') {
+	        		// get top three womens series, with handicap
+	        		return;
+
+	        	} else {
+	        		// get top three womens series, scratch
+					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname, MAX(g1 + g2 + g3) AS hscore
+			 				FROM bnp_players
+			 				JOIN bnp_stats
+			 				ON bnp_stats.pid = bnp_players.pid
+		                    WHERE bnp_players.mf = 'f'
+							GROUP BY bnp_players.pid
+		                    ORDER BY hscore DESC LIMIT 3";
+	        	}				
 			}
 		}
 

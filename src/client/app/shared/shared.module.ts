@@ -41,7 +41,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [StandingsListService]
+      providers: [StandingsListService,MensGameScratchService]
     };
   }
 }

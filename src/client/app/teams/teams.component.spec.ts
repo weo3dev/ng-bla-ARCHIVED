@@ -26,8 +26,8 @@ export function main() {
         TestBed
           .compileComponents()
           .then(() => {
-            let fixture = TestBed.createComponent(TestComponent);
-            let teamsDOMEl = fixture.debugElement.children[0].nativeElement;
+            //let fixture = TestBed.createComponent(TestComponent);
+            //let teamsDOMEl = fixture.debugElement.children[0].nativeElement;
 
               //expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Features');
           });
@@ -36,9 +36,7 @@ export function main() {
 }
 
 class MockNameListService {
-
   returnValue: string[];
-
   get(): Observable<string[]> {
     return Observable.create((observer: any) => {
       observer.next(this.returnValue);

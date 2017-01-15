@@ -13,12 +13,8 @@ import { MaterialModule } from '@angular/material';
     TeamsRoutingModule,
     MaterialModule
   ],
-  declarations: [
-    TeamsComponent
-  ],
-  providers: [
-    TeamListService
-  ],
+  declarations: [TeamsComponent],
+  providers: [TeamListService],
   exports: [TeamsComponent]
 })
 export class TeamsModule { }
