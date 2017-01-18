@@ -13,6 +13,8 @@ import { WomensSeriesHandicapService } from '../shared/services/womens-series-ha
 
 import { Player } from '../shared/models/Player';
 
+import * as d3 from 'd3';
+
 
 @Component({
   moduleId: module.id,
