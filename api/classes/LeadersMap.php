@@ -16,8 +16,14 @@ class LeadersMap extends Mapper {
 
 				if($handicap === 'y') {
 					// get top three mens games, with handicap
-					return;
-
+					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname,
+							GREATEST( (MAX(g1)+hnd), (MAX(g2)+hnd), (MAX(g3)+hnd)) AS hscore
+			 				FROM bnp_players
+			 				JOIN bnp_stats
+			 				ON bnp_stats.pid = bnp_players.pid
+		                    WHERE bnp_players.mf = 'm'
+							GROUP BY bnp_players.pid
+		                    ORDER BY hscore DESC LIMIT 3";
 				} else {
 					// get top three mens games, scratch
 					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname, GREATEST(MAX(g1), MAX(g2), MAX(g3)) AS hscore
@@ -33,8 +39,14 @@ class LeadersMap extends Mapper {
 
 	        	if($handicap === 'y') {
 	        		// get top three mens series, with handicap
-	        		return;
-
+					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname,
+							MAX(g1 + g2 + g3 + hnd) AS hscore
+			 				FROM bnp_players
+			 				JOIN bnp_stats
+			 				ON bnp_stats.pid = bnp_players.pid
+		                    WHERE bnp_players.mf = 'm'
+							GROUP BY bnp_players.pid
+		                    ORDER BY hscore DESC LIMIT 3";
 	        	} else {
 	        		// get top three mens series, scratch
 					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname, MAX(g1 + g2 + g3) AS hscore
@@ -56,8 +68,14 @@ class LeadersMap extends Mapper {
 
 				if($handicap === 'y') {
 					// get top three womens games, with handicap
-					return;
-
+					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname,
+							GREATEST( (MAX(g1)+hnd), (MAX(g2)+hnd), (MAX(g3)+hnd)) AS hscore
+			 				FROM bnp_players
+			 				JOIN bnp_stats
+			 				ON bnp_stats.pid = bnp_players.pid
+		                    WHERE bnp_players.mf = 'f'
+							GROUP BY bnp_players.pid
+		                    ORDER BY hscore DESC LIMIT 3";
 				} else {
 
 					// get top three women, scratch
@@ -74,8 +92,14 @@ class LeadersMap extends Mapper {
 
 	        	if($handicap === 'y') {
 	        		// get top three womens series, with handicap
-	        		return;
-
+					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname,
+							MAX(g1 + g2 + g3 + hnd) AS hscore
+			 				FROM bnp_players
+			 				JOIN bnp_stats
+			 				ON bnp_stats.pid = bnp_players.pid
+		                    WHERE bnp_players.mf = 'f'
+							GROUP BY bnp_players.pid
+		                    ORDER BY hscore DESC LIMIT 3";
 	        	} else {
 	        		// get top three womens series, scratch
 					$sql = "SELECT DISTINCT bnp_players.pid as pid, pname, MAX(g1 + g2 + g3) AS hscore
