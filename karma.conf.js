@@ -17,7 +17,6 @@ module.exports = function (config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
     // list of files / patterns to load in the browser
     files: [
       // Polyfills.
@@ -51,6 +50,10 @@ module.exports = function (config) {
       { pattern: 'dist/dev/**/*.html', included: false, watched: true, served: true },
       { pattern: 'dist/dev/**/*.css', included: false, watched: true, served: true },
       { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false }, // PhantomJS2 (and possibly others) might require it
+      
+
+      { pattern: 'node_modules/@swimlane/ngx-charts/**/*.js', included: false, watched: true },
+
 
       // suppress annoying 404 warnings for resources, images, etc.
       { pattern: 'dist/dev/assets/**/*', watched: false, included: false, served: true },

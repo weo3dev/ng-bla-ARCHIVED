@@ -1,17 +1,26 @@
 <h3> a team page </h3>
 
-
-<div *ngIf="team">
-
+<div *ngIf="!team">no data. yet.</div>
+<div *ngIf="team" style="padding: 2rem;">
  	<div *ngFor="let t of team">
  		<p>{{ t.name }}, {{ t.id}} </p>
  	</div>
-
 </div>
 
 
-<div *ngIf="!team">
-	no data. yet.
-</div>
-
-
+<!-- 
+<ngx-charts-line-chart
+	[view]="view"
+	[scheme]="colorScheme"
+	[results]="multi"
+	[gradient]="gradient"
+	[xAxis]="showXAxis"
+	[yAxis]="showYAxis"
+	[legend]="showLegend"
+	[showXAxisLabel]="showXAxisLabel"
+	[showYAxisLabel]="showYAxisLabel"
+	[xAxisLabel]="xAxisLabel"
+	[yAxisLabel]="yAxisLabel"
+	[autoScale]="autoScale"
+	(select)="onSelect($event)">
+</ngx-charts-line-chart> -->

@@ -7,6 +7,11 @@ import { SharedModule } from '../shared/shared.module';
 
 import { MaterialModule } from '@angular/material';
 
+import * as d3 from 'd3';
+
+//import { NgxChartsModule } from '@swimlane/ngx-charts/release/index';
+
+
 @NgModule({
   imports: [
     CommonModule,

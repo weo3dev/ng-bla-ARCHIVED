@@ -27,7 +27,7 @@ export class ProjectConfig extends SeedConfig {
       ...this.NPM_DEPENDENCIES,
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
-         {src: '@angular/material/core/theming/prebuilt/indigo-pink.css', inject: true}
+         {src: '@angular/material/core/theming/prebuilt/indigo-pink.css', inject: true},
     ];
 
     // Add `local` third-party libraries to be injected/bundled.
@@ -45,6 +45,7 @@ export class ProjectConfig extends SeedConfig {
     // }];
     //
     // this.addPackagesBundles(additionalPackages);
+
 
     this.addPackageBundles({
      name:'@angular/material',
